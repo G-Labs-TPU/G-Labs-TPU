@@ -1,1 +1,1 @@
-Main website for company.
+G-labs is a small software company based in Prague.
