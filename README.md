@@ -1,1 +1,1 @@
-G-labs is a small software company based in Prague.
+G-labs is a small software development and consulting company based in Prague.
