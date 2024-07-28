@@ -1,65 +1,74 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<script src="https://kit.fontawesome.com/593ac7c3ab.js" crossorigin="anonymous"></script>
+<html>
+
 <body>
 
-   <!-- Navigation bar -->
-  <nav class="w3-bar w3-black">
-  <a href="index.html" class="w3-button w3-bar-item">home</a>
-  
-  // TODO add links and files
-  <a href="software_development.html" class="w3-button w3-bar-item">software development</a>
-  <a href="consulting.html" class="w3-button w3-bar-item">consulting</a>
-  <a href="contact.html" class="w3-button w3-bar-item">contacts</a>
-  </nav> 
-  <!-- Content will go here -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>INode Tech</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
 
-  // TODO ADD Slideshow
-   <!-- Slide Show -->
-  <section>
-    <img class="slides" src="./img/wpp.jpg" style="width:100%">
-  </section> 
+    </head>
 
-  // TODO ADD About us
-    <!-- Uvodni pokec -->
-  <section class="w3-container w3-center w3-content" style="max-width:600px">
-    <h2 class="w3-wide">G-LABS</h2>
-    <p class="w3-opacity"><i>Software company & consulting</i></p>
-    <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <br>
-  </section>
 
-  // TODO ADD Products
-  <!-- Produkty -->
-  <section class="w3-row-padding w3-center w3-light-grey">
-    <article class="w3-third">
-      <p>ML algorithms integration</p>
-      <img src="./img/ml_show.png" alt="ML-algoriths" style="width:50%">
-      <p>Integrating ML algorithms into your own business models.<p>
-    </article>
-    <article class="w3-third">
-      <p>AI models development</p>
-      <img src="./img/ai_show.jpg" alt="AI-integration" style="width:50%">
-      <p>Consultations about AI / integration into already running business models or into a fresh new ones.<p>
-    </article>
-    <article class="w3-third">
-      <p>Web developement</p>
-      <img src="./img/web_show.jpg" alt="Web-development" style="width:50%">
-      <p>Creating basic web pages for enterpreneurs or small businesses.<p>
-    </article>
-  </section>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="/images/inode.png" alt="INode Tech" width="50" height="50">
+            </a>
+        </div>
+        <div class="title">
+            <h1>INode Tech Group</h1>
+        </div>
+    </div>
 
-    // TODO ADD propper Contacts
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-    <a href="https://x.com/vnskbeatz"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="https://www.linkedin.com/in/jakubvonasek/"><i class="fa fa-linkedin"></i></a>
-    <p class="w3-medium">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </p>
-  </footer>
-  
+
+    <button class="menu-icon" onclick="toggleMenu()">☰</button>
+
+    <div id="sideMenu" class="side-menu">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Our projects</a>
+        <a href="members.html">Team members</a>
+        <a href="contact.html">Contact us</a>
+
+    </div>
+
+    <div class="firstPar">
+        <div class="firstParHead">
+            <h2>
+                Who are we?
+            </h2>
+        </div>
+
+        <p>
+            We are a software firm composed solely of students. Our team consists of talented individuals who are
+            passionate
+            about technology and eager to learn and grow. With our fresh perspectives and innovative ideas, we strive to
+            deliver high-quality software solutions to our clients. Through our projects, we gain valuable real-world
+            experience while providing cutting-edge solutions to meet the needs of our clients.
+        </p>
+    </div>
+
+
+    <div class="secondPar">
+        <div class="secondParHead">
+            <h2>
+                Why should you choose us?
+            </h2>
+        </div>
+        <p>
+            Choosing us for your project brings numerous advantages.
+            Our team of talented students offers a fresh and innovative perspective, constantly learning and staying
+            up-to-date with the latest technologies and trends. We are highly motivated and passionate about technology,
+            resulting in exceptional dedication and commitment. With a strong thirst for knowledge and a hunger to
+            learn, we are always open to new challenges and eager to expand our skill set. Additionally, we provide
+            competitive rates and cost-effective solutions, ensuring exceptional results that exceed your expectations.
+        </p>
+        </p>
+
+    </div>
+
 </body>
 </html>
