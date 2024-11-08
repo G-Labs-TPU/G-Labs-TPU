@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCraft Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                home: "Home",
+                about: "About",
+                services: "Services",
+                projects: "Projects",
+                team: "Team",
+                testimonials: "Testimonials",
+                contact: "Contact",
+                hero_title: "Crafting Digital Excellence",
+                hero_subtitle: "We transform your ideas into powerful digital solutions",
+                get_started: "Get Started",
+                why_choose_us: "Why Choose Us",
+                innovation: "Innovation",
+                innovation_desc: "We bring fresh perspectives and cutting-edge solutions to every project.",
+                speed: "Speed",
+                speed_desc: "Fast delivery without compromising on quality.",
+                reliability: "Reliability",
+                reliability_desc: "We stand behind our work and deliver on our promises.",
+                our_services: "Our Services",
+                web_dev: "Web Development",
+                web_dev_desc: "Custom websites and web applications built with modern technologies.",
+                mobile_dev: "Mobile Development",
+                mobile_dev_desc: "Native and cross-platform mobile applications.",
+                ui_ux: "UI/UX Design",
+                ui_ux_desc: "Beautiful and intuitive user interfaces that deliver results.",
+                our_team: "Our Team",
+                full_stack: "Full Stack Developer",
+                backend: "Backend Developer",
+                frontend: "Frontend Developer",
+                our_projects: "Our Projects",
+                project_1: "Project 1",
+                project_1_desc: "Description of project 1",
+                project_2: "Project 2",
+                project_2_desc: "Description of project 2",
+                client_testimonials: "Client Testimonials",
+                testimonial_1: "Excellent work and professional service. Highly recommended!",
+                testimonial_2: "They delivered our project on time and exceeded our expectations.",
+                testimonial_3: "Great team to work with. Very responsive and professional.",
+                contact_us: "Contact Us",
+                name: "Name",
+                email: "Email",
+                message: "Message",
+                send_message: "Send Message",
+                footer: "© 2024 G-Labs. All rights reserved.",
+                consulting: "Consulting",
+        consulting_desc: "Expert guidance for your technical decisions and digital strategy.",
+        website_creation: "Website Creation",
+        website_creation_desc: "Custom-built websites that perfectly match your vision and needs.",
+        software_maintenance: "Software Maintenance",
+        software_maintenance_desc: "Comprehensive care and updates for your existing software systems.",
+    },
+            cs: {
+                home: "Domů",
+                about: "O nás",
+                services: "Služby",
+                projects: "Projekty",
+                team: "Tým",
+                testimonials: "Reference",
+                contact: "Kontakt",
+                hero_title: "Tvoříme Digitální Excelenci",
+                hero_subtitle: "Přeměňujeme vaše nápady v silná digitální ešení",
+                get_started: "Začít Spolupráci",
+                why_choose_us: "Proč Si Vybrat Nás",
+                innovation: "Inovace",
+                innovation_desc: "Přinášíme nové perspektivy a moderní řešení do každého projektu.",
+                speed: "Rychlost",
+                speed_desc: "Rychlé dodání bez kompromisů na kvalitě.",
+                reliability: "Spolehlivost",
+                reliability_desc: "Stojíme si za naší prací a plníme naše sliby.",
+                our_services: "Naše Služby",
+                web_dev: "Vývoj Webů",
+                web_dev_desc: "Vlastní webové stránky a aplikace vytvořené moderními technologiemi.",
+                mobile_dev: "Vývoj Mobilních Aplikací",
+                mobile_dev_desc: "Nativní a multiplatformní mobilní aplikace.",
+                ui_ux: "UI/UX Design",
+                ui_ux_desc: "Krásná a intuitivní uživatelská rozhraní, která přinášejí výsledky.",
+                our_team: "Náš Tým",
+                full_stack: "Full Stack Vývojář",
+                backend: "Backend Vývojář",
+                frontend: "Frontend Vývojář",
+                our_projects: "Naše Projekty",
+                project_1: "Projekt 1",
+                project_1_desc: "Popis projektu 1",
+                project_2: "Projekt 2",
+                project_2_desc: "Popis projektu 2",
+                client_testimonials: "Reference Klientů",
+                testimonial_1: "Vynikající práce a profesionální služby. Vřele doporučuji!",
+                testimonial_2: "Dodali náš projekt včas a předčili naše očekávání.",
+                testimonial_3: "Skvělý tým pro spolupráci. Velmi vstřícní a profesionální.",
+                contact_us: "Kontaktujte Nás",
+                name: "Jméno",
+                email: "Email",
+                message: "Zpráva",
+                send_message: "Odeslat Zprávu",
+                footer: "© 2024 G-Labs. Všechna práva vyhrazena.",
+                consulting: "Konzultace",
+                consulting_desc: "Expertní poradenství pro vaše technické rozhodnutí a digitalní strategii.",
+                website_creation: "Vytvoření Webu",
+                website_creation_desc: "Vlastní webové stránky, které perfektně odpovídají vašemu vizu a potřebám.",
+                software_maintenance: "Údržba Softwaru",
+                software_maintenance_desc: "Komplexní péče a aktualizace pro vaše existující software systémy."
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <img src="images/inode.jpg" alt="G-Labs" class="h-8">
+                    <span class="text-white text-xl font-medium">G-Labs</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link" data-lang-key="home">Home</a>
+                    <a href="#services" class="nav-link" data-lang-key="services">Services</a>
+                    <a href="#team" class="nav-link" data-lang-key="team">Team</a>
+                    <a href="#contact" class="nav-link" data-lang-key="contact">Contact</a>
+                    <a href="#" onclick="switchLanguage('cs')" class="nav-link">
+                        <img src="images/cze.png" alt="Czech" class="w-6 h-4">
+                    </a>
+                    <a href="#" onclick="switchLanguage('en')" class="nav-link">
+                        <img src="images/uk.png" alt="English" class="w-6 h-4">
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+            <a href="#home" class="mobile-nav-link" data-lang-key="home">Home</a>
+            <a href="#about" class="mobile-nav-link" data-lang-key="about">About</a>
+            <a href="#services" class="mobile-nav-link" data-lang-key="services">Services</a>
+            <a href="#projects" class="mobile-nav-link" data-lang-key="projects">Projects</a>
+            <a href="#team" class="mobile-nav-link" data-lang-key="team">Team</a>
+            <a href="#testimonials" class="mobile-nav-link" data-lang-key="testimonials">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link" data-lang-key="contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-medium mb-6" data-aos="fade-up" data-lang-key="hero_title">
+                    Crafting Digital Excellence
+                </h1>
+                <p class="text-xl text-gray-600 mb-10" data-aos="fade-up" data-aos-delay="200" data-lang-key="hero_subtitle">
+                    We transform your ideas into powerful digital solutions
+                </p>
+                <a href="#contact" class="primary-button" data-aos="fade-up" data-aos-delay="400" data-lang-key="get_started">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-lang-key="why_choose_us">Why Choose Us</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-semibold mb-4" data-lang-key="innovation">Innovation</h3>
+                    <p class="text-gray-600" data-lang-key="innovation_desc">We bring fresh perspectives and cutting-edge solutions to every project.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-4" data-lang-key="speed">Speed</h3>
+                    <p class="text-gray-600" data-lang-key="speed_desc">Fast delivery without compromising on quality.</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold mb-4" data-lang-key="reliability">Reliability</h3>
+                    <p class="text-gray-600" data-lang-key="reliability_desc">We stand behind our work and deliver on our promises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="our_services">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Consulting -->
+                <div class="service-card" data-aos="fade-up">
+                    <h3 class="text-xl font-medium mb-4" data-lang-key="consulting">Consulting</h3>
+                    <p class="text-gray-600" data-lang-key="consulting_desc">Expert guidance for your technical decisions and digital strategy.</p>
+                </div>
+
+                <!-- Website Creation -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-medium mb-4" data-lang-key="website_creation">Website Creation</h3>
+                    <p class="text-gray-600" data-lang-key="website_creation_desc">Custom-built websites that perfectly match your vision and needs.</p>
+                </div>
+
+                <!-- Software Maintenance -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-medium mb-4" data-lang-key="software_maintenance">Software Maintenance</h3>
+                    <p class="text-gray-600" data-lang-key="software_maintenance_desc">Comprehensive care and updates for your existing software systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-lang-key="our_team">Our Team</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
+                        <img src="images/capybara.jpeg" alt="Jakub Vonášek" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#111111]">Jakub Vonášek</h3>
+                    <p class="text-gray-600" data-lang-key="full_stack">Full Stack Developer</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://durkojak.github.io" target="_blank" class="block hover:opacity-90 transition-opacity">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
+                            <img src="images/jakub_durkovic.jpg" alt="Jakub Ďurkovič" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#111111]">Jakub Ďurkovič</h3>
+                        <p class="text-gray-600">Backend Developer</p>
+                    </a>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
+                        <img src="images/capybara.jpeg" alt="Kryštof Jelínek" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#111111]">Kryštof Jelínek</h3>
+                    <p class="text-gray-600">Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-lang-key="our_projects">Our Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-lang-key="project_1">Project 1</h3>
+                        <p class="text-gray-600" data-lang-key="project_1_desc">Description of project 1</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-lang-key="project_2">Project 2</h3>
+                        <p class="text-gray-600" data-lang-key="project_2_desc">Description of project 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-lang-key="client_testimonials">Client Testimonials</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up">
+                    <p class="text-gray-600 mb-4" data-lang-key="testimonial_1">Excellent work and professional service. Highly recommended!</p>
+                    <p class="font-semibold">- John Doe</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-gray-600 mb-4" data-lang-key="testimonial_2">They delivered our project on time and exceeded our expectations.</p>
+                    <p class="font-semibold">- Jane Smith</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-gray-600 mb-4" data-lang-key="testimonial_3">Great team to work with. Very responsive and professional.</p>
+                    <p class="font-semibold">- Mike Johnson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl text-center mb-16" data-aos="fade-up" data-lang-key="contact_us">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form class="space-y-8" data-aos="fade-up">
+                    <div>
+                        <input type="text" id="name" class="w-full px-4 py-3 border-b border-gray-200 focus:border-black focus:outline-none" placeholder="Name">
+                    </div>
+                    <div>
+                        <input type="email" id="email" class="w-full px-4 py-3 border-b border-gray-200 focus:border-black focus:outline-none" placeholder="Email">
+                    </div>
+                    <div>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 border-b border-gray-200 focus:border-black focus:outline-none" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="primary-button w-full">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p data-lang-key="footer">© 2024 G-Labs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

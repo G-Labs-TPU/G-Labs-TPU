@@ -1,0 +1,146 @@
+/* Navigation styles */
+.nav-link {
+    color: var(--text-light);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+/* Main content styles */
+body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Section styles */
+section {
+    background: var(--background-light);
+    padding: 5rem 0;
+}
+
+/* Typography updates */
+h1, h2, h3 {
+    color: var(--text-dark);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Service card updates */
+.service-card {
+    background: white;
+    padding: 2.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Button styles */
+.primary-button {
+    background: var(--text-dark);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s ease;
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+}
+
+/* Update color variables */
+:root {
+    --primary-dark: #000000;
+    --background-light: #fafafa;  /* Slightly off-white for softer look */
+    --text-dark: #111111;        /* Soft black for text */
+    --text-light: #ffffff;
+    --text-gray: #666666;        /* Subtle gray for secondary text */
+    --border-light: #eaeaea;     /* Subtle border color */
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+/* Add accent colors */
+.accent-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    border-color: var(--primary-color);
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+/* Add logo styles */
+.logo-section {
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    z-index: 40;
+    display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 768px) {
+    .logo-section {
+        display: block;
+    }
+}
+
+.logo-container {
+    background: var(--secondary-dark);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    height: 2.5rem;
+    width: auto;
+}
+
+/* Add smooth transitions */
+* {
+    transition: all 0.3s ease;
+}

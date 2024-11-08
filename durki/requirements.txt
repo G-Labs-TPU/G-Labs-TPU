@@ -1,0 +1,17 @@
+A simple, yet modern looking and responsive website for a Software Firm created by students.
+
+Technologies used : HTML, Tailwind CSS, JavaScript
+
+What things should the site have:
+  a section for some introduction about us and why you should choose us
+  section for the team
+  section for services offered
+  section for contact information
+  navigation bar that when clicked on takes you to the respective section
+  a footer with year and name of firm and copyright symbol
+  a section where our clients review about our firm
+  a section where we show our projects
+  a czech version and english version of the website
+
+
+It should look modern and clean and professional and smooth transitions. We have 3 members in our team. Jakub Vonášek, Jakub Ďurkovič and Kryštof Jelínek.
